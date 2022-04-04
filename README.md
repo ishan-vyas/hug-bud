@@ -1,4 +1,4 @@
-# hug-bud
+# Hug-Bud
 
 Hug Bud
 
