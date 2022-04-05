@@ -41,7 +41,6 @@ void loop()
 
   int analogReading = analogRead(FORCE_SENSOR_PIN);
 
-  Serial.print("Force sensor reading = ");
   Serial.print(analogReading); 
 
     digitalWrite(motorPin1, HIGH);
@@ -55,22 +54,18 @@ void loop()
     delayVal = 100;
     
   }else if (analogReading < 200){
-    Serial.println(" -> light touch");
     // Apply the flower pattern lights to the LEDs
     showColors(2);
     delayVal = 250;
   }else if (analogReading < 500){
-    Serial.println(" -> light squeeze");
     // Apply the flower pattern lights to the LEDs
     showColors(3);
     delayVal = 500;
   }else if (analogReading < 800){ 
-    Serial.println(" -> medium squeeze");
     // Apply the flower pattern lights to the LEDs
     showColors(4);
     delayVal = 750;
   }else{  
-    Serial.println(" -> big squeeze");
     // Show the rainbow effect
     rainbow(1);
     delayVal = 1000; 
