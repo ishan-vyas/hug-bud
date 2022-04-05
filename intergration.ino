@@ -48,11 +48,9 @@ void loop()
 
   // As the pressure increases, vibrate the motors for longer by controlling the delayVal
   if (analogReading < 50){
-    Serial.println(" -> no pressure");
     // Apply the flower pattern lights to the LEDs
     showColors(1);
-    delayVal = 100;
-    
+    delayVal = 100;  
   }else if (analogReading < 200){
     // Apply the flower pattern lights to the LEDs
     showColors(2);
